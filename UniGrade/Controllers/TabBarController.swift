@@ -13,22 +13,22 @@ class TabBarViewController: UITabBarController {
     }
     
     private func generateTabBar() {
-        let homeView = MainPageView()
-        let homeVC = UIHostingController(rootView: homeView)
-        homeVC.tabBarItem = UITabBarItem(title: "Главная", image: UIImage(systemName: "house.fill"), tag: 1)
-        
-        let busketPageView = BusketPageView(viewModel: BusketViewModel.shared)
-        let busketVC = UIHostingController(rootView: busketPageView)
-        
-        let profilePageView = ProfilePageView()
-        let profileVC = UIHostingController(rootView: profilePageView)
-        profileVC.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person"), tag: 3)
-        busketVC.tabBarItem = UITabBarItem(title: "Корзина", image: UIImage(systemName: "basket"), tag: 3)
-        
-        homeVC.navigationController?.isNavigationBarHidden = true
-        profileVC.navigationController?.isNavigationBarHidden = true
-        busketVC.navigationController?.isNavigationBarHidden = true
-        setViewControllers([homeVC, busketVC, profileVC], animated: true)
+//        let homeView = MainPageView()
+//        let homeVC = UIHostingController(rootView: homeView)
+//        homeVC.tabBarItem = UITabBarItem(title: "Главная", image: UIImage(systemName: "house.fill"), tag: 1)
+//        
+//        let busketPageView = BusketPageView(viewModel: BusketViewModel.shared)
+//        let busketVC = UIHostingController(rootView: busketPageView)
+//        
+//        let profilePageView = ProfilePageView()
+//        let profileVC = UIHostingController(rootView: profilePageView)
+//        profileVC.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person"), tag: 3)
+//        busketVC.tabBarItem = UITabBarItem(title: "Корзина", image: UIImage(systemName: "basket"), tag: 3)
+//        
+//        homeVC.navigationController?.isNavigationBarHidden = true
+//        profileVC.navigationController?.isNavigationBarHidden = true
+//        busketVC.navigationController?.isNavigationBarHidden = true
+//        setViewControllers([homeVC, busketVC, profileVC], animated: true)
     }
     
 

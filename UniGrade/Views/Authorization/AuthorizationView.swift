@@ -70,7 +70,7 @@ struct AuthorizationView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Resources.Colors.backgroundColor)
+        .background(Resources.Colors.mainColor)
         .ignoresSafeArea()
     }
 }

@@ -11,27 +11,29 @@ struct TeachersView: View {
     let layout = [GridItem(.flexible())]
     @State private var searchText: String = ""
 
-    var filteredTeachers: [Teacher] {
+    var filteredTeachers: [TeacherViewModel] {
             if searchText.isEmpty {
                 return testTeachers
             } else {
                 return testTeachers.filter { teacher in
-                    teacher.name.contains(searchText) || teacher.lastName.contains(searchText)
+                    teacher.teacher.name.contains(searchText) || teacher.teacher.lastName.contains(searchText)
                 }
             }
         }
     
     let testTeachers = [
-        Teacher(id: "1", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30),
-        Teacher(id: "2", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30),
-        Teacher(id: "3", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30),
-        Teacher(id: "4", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30),
-        Teacher(id: "5", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30),
-        
-        Teacher(id: "6", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30),
-        Teacher(id: "7", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30),
-        Teacher(id: "8", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30),
-        Teacher(id: "9", name: "Бахытжан", lastName: "Еликбай", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30),
+        TeacherViewModel(teacher: Teacher(id: "1", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30)),
+        TeacherViewModel(teacher: Teacher(id: "2", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30)),
+        TeacherViewModel(teacher: Teacher(id: "3", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30)),
+        TeacherViewModel(teacher: Teacher(id: "4", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30)),
+        TeacherViewModel(teacher: Teacher(id: "5", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30)),
+        TeacherViewModel(teacher: Teacher(id: "6", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30)),
+        TeacherViewModel(teacher: Teacher(id: "7", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30)),
+        TeacherViewModel(teacher: Teacher(id: "8", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30)),
+        TeacherViewModel(teacher: Teacher(id: "9", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30)),
+        TeacherViewModel(teacher: Teacher(id: "10", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30)),
+        TeacherViewModel(teacher: Teacher(id: "11", name: "Бахытжан", lastName: "Еликбай", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30)),
+
         
         
     ]
@@ -64,7 +66,7 @@ struct TeachersView: View {
             
                 LazyVGrid(columns: layout, spacing: 10) {
                     ForEach(filteredTeachers, id: \.id) { item in
-                        TeacherCell(teacher: item)
+                        TeacherCell(viewModel: item)
                     }
                 }
 

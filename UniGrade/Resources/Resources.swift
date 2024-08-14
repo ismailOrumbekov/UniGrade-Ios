@@ -12,6 +12,6 @@ struct Resources{
     public static let screen = UIScreen.main.bounds
 
     struct Colors{
-        public static let backgroundColor = Color(hexString: "#1D2473")
+        public static let mainColor = Color(hexString: "#1D2473")
     }
 }

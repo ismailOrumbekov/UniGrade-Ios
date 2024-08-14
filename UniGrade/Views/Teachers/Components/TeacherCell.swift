@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TeacherCell: View {
     @State private var grade = 0
-    let teacher: Teacher
+    let viewModel: TeacherViewModel
     var body: some View {
         HStack{
             Image("StudentImage")
@@ -22,11 +22,11 @@ struct TeacherCell: View {
                 .padding(.trailing)
             
             VStack(alignment: .leading){
-                Text("\(teacher.name) \(teacher.lastName)")
+                Text("\(viewModel.teacher.name) \(viewModel.teacher.lastName)")
                     .font(.custom("Arial", size: 20))
                     .fontWeight(.medium)
                 
-                Text("Средняя оценка: \(String(format: "%.1f", teacher.avgGrade))")
+                Text("Средняя оценка: \(String(format: "%.1f", viewModel.teacher.avgGrade))")
                     .padding(.bottom, 2)
                 
                 Text("Основной предмет: Философия" )
@@ -46,5 +46,5 @@ struct TeacherCell: View {
 }
 
 #Preview {
-    TeacherCell(teacher: Teacher(id:"1", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30))
+    TeacherCell(viewModel: TeacherViewModel(teacher: Teacher(id:"1", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30)))
 }

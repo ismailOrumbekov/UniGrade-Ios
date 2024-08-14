@@ -13,22 +13,16 @@ class TabBarViewController: UITabBarController {
     }
     
     private func generateTabBar() {
-//        let homeView = MainPageView()
-//        let homeVC = UIHostingController(rootView: homeView)
-//        homeVC.tabBarItem = UITabBarItem(title: "Главная", image: UIImage(systemName: "house.fill"), tag: 1)
-//        
-//        let busketPageView = BusketPageView(viewModel: BusketViewModel.shared)
-//        let busketVC = UIHostingController(rootView: busketPageView)
-//        
-//        let profilePageView = ProfilePageView()
-//        let profileVC = UIHostingController(rootView: profilePageView)
-//        profileVC.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person"), tag: 3)
-//        busketVC.tabBarItem = UITabBarItem(title: "Корзина", image: UIImage(systemName: "basket"), tag: 3)
-//        
-//        homeVC.navigationController?.isNavigationBarHidden = true
-//        profileVC.navigationController?.isNavigationBarHidden = true
-//        busketVC.navigationController?.isNavigationBarHidden = true
-//        setViewControllers([homeVC, busketVC, profileVC], animated: true)
+        let teacherView = TeachersView()
+        let teacherVC = UIHostingController(rootView: teacherView)
+        teacherVC.tabBarItem = UITabBarItem(title: "Главная", image: UIImage(systemName: "house.fill"), tag: 1)
+        
+        let busketPageView = AuthorizationView()
+        let busketVC = UIHostingController(rootView: busketPageView)
+    
+        teacherVC.navigationController?.isNavigationBarHidden = true
+        busketVC.navigationController?.isNavigationBarHidden = true
+        setViewControllers([teacherVC, busketVC], animated: true)
     }
     
 
@@ -57,7 +51,7 @@ class TabBarViewController: UITabBarController {
         tabBar.itemWidth = width / 5
         tabBar.itemPositioning = .centered
         
-        roundLayer.fillColor = UIColor(hexString: "#242B33").cgColor
+        roundLayer.fillColor = UIColor(hexString: "#1D2473").cgColor
         
         tabBar.unselectedItemTintColor = UIColor(hexString: "#697888")
         tabBar.tintColor = UIColor(hexString: "#E6A283")

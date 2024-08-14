@@ -6,14 +6,12 @@ struct AuthorizationView: View {
     
     var body: some View {
         VStack {
-//            Image("Logo")
-//                .resizable()
-//                .frame(maxWidth: 250, maxHeight: 200)
-//                .aspectRatio(contentMode: .fill)
-//                .clipped()
-//                .ignoresSafeArea()
-//                .background(Color.white)
-//                .padding(.bottom)
+            Image("image")
+                .resizable()
+                .frame(maxWidth: 300, maxHeight: 80)
+                .aspectRatio(contentMode: .fill)
+                .clipped()
+                .padding(.bottom)
             
 //            Text("UniGrade")
 //                .font(.custom("Arial", size: 32))

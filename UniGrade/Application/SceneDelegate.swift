@@ -17,8 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
-        let authorizationView = AuthorizationView()
-        let vc = UIHostingController(rootView: authorizationView)
+        let vc = TabBarViewController()
         window.rootViewController = vc
         window.makeKeyAndVisible()
         self.window = window

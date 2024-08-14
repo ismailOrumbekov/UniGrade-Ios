@@ -7,3 +7,15 @@
 
 import Foundation
 
+struct Teacher: Identifiable{
+    var id: String
+    
+    let name: String
+    let lastName: String
+    let age: Int
+    let university: String
+    let avgGrade: Double
+    let numberOfGrades: Int
+    
+    
+}

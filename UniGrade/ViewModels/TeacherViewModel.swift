@@ -20,6 +20,10 @@ class TeacherViewModel: ObservableObject, Identifiable{
         self.teacher = teacher
         self.image = image
     }
+    
+    func getAvgGrade() -> String{
+        return String(format: "%.1f", teacher.avgGrade)
+    }
 }
     
     

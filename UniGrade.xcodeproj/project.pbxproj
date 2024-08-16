@@ -25,6 +25,8 @@
 		8D57923F2C6CC19A0084CDD1 /* TeacherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57923E2C6CC19A0084CDD1 /* TeacherView.swift */; };
 		8D5792422C6CC3B40084CDD1 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5792412C6CC3B40084CDD1 /* HeaderView.swift */; };
 		8D5792442C6CC40A0084CDD1 /* TeacherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5792432C6CC40A0084CDD1 /* TeacherViewModel.swift */; };
+		8D5792462C6CF9200084CDD1 /* GradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5792452C6CF9200084CDD1 /* GradeCell.swift */; };
+		8D57924A2C6CFBFF0084CDD1 /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5792492C6CFBFF0084CDD1 /* Grade.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		8D57923E2C6CC19A0084CDD1 /* TeacherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherView.swift; sourceTree = "<group>"; };
 		8D5792412C6CC3B40084CDD1 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		8D5792432C6CC40A0084CDD1 /* TeacherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherViewModel.swift; sourceTree = "<group>"; };
+		8D5792452C6CF9200084CDD1 /* GradeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeCell.swift; sourceTree = "<group>"; };
+		8D5792492C6CFBFF0084CDD1 /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				8D57923A2C68D61E0084CDD1 /* Teacher.swift */,
+				8D5792492C6CFBFF0084CDD1 /* Grade.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				8D5792412C6CC3B40084CDD1 /* HeaderView.swift */,
+				8D5792452C6CF9200084CDD1 /* GradeCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -388,9 +394,11 @@
 				8D5791F82C6758E50084CDD1 /* SceneDelegate.swift in Sources */,
 				8D5792302C675BE70084CDD1 /* RegistrationView.swift in Sources */,
 				8D57922E2C675BCF0084CDD1 /* AuthorizationView.swift in Sources */,
+				8D57924A2C6CFBFF0084CDD1 /* Grade.swift in Sources */,
 				8D5792422C6CC3B40084CDD1 /* HeaderView.swift in Sources */,
 				8D57923B2C68D61E0084CDD1 /* Teacher.swift in Sources */,
 				8D57922A2C675B3E0084CDD1 /* Extensions.swift in Sources */,
+				8D5792462C6CF9200084CDD1 /* GradeCell.swift in Sources */,
 				8D5792382C68D00F0084CDD1 /* TeacherCell.swift in Sources */,
 				8D5792352C68CFE10084CDD1 /* TeachersView.swift in Sources */,
 			);

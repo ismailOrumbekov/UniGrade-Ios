@@ -23,14 +23,14 @@ struct TeacherCell: View {
             
             VStack(alignment: .leading){
                 Text("\(viewModel.teacher.name) \(viewModel.teacher.lastName)")
-                    .font(.custom("Arial", size: 20))
+                    .font(Resources.Fonts.mainFont(size: 20))
                     .fontWeight(.medium)
                 
-                Text("Средняя оценка: \(String(format: "%.1f", viewModel.teacher.avgGrade))")
+                Text("Средняя оценка: \(viewModel.getAvgGrade())")
                     .padding(.bottom, 2)
                 
                 Text("Основной предмет: Философия" )
-                    .font(.custom("Arial", size: 13))
+                    .font(Resources.Fonts.mainFont(size: 13))
                     
                 
 

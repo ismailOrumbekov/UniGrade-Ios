@@ -17,7 +17,7 @@ class TabBarViewController: UITabBarController {
         let teacherVC = UIHostingController(rootView: teacherView)
         teacherVC.tabBarItem = UITabBarItem(title: "Главная", image: UIImage(systemName: "house.fill"), tag: 1)
         
-        let busketPageView = AuthorizationView()
+        let busketPageView = TeacherView(viewModel: TeacherViewModel(teacher: Teacher(id: "1", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30),image: Image("teacher")))
         let busketVC = UIHostingController(rootView: busketPageView)
     
         teacherVC.navigationController?.isNavigationBarHidden = true

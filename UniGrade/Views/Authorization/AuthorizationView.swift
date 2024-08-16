@@ -20,7 +20,7 @@ struct AuthorizationView: View {
 //                .padding(.bottom, 80)
             
             Text("Авторизоваться")
-                .font(.custom("Arial", size: 28))
+                .font(Resources.Fonts.mainFont(size: 28))
                 .foregroundColor(.white)
                 .padding(.bottom)
             
@@ -45,7 +45,7 @@ struct AuthorizationView: View {
                     print("hello world")
                 } label: {
                     Text("Войти")
-                        .font(.custom("Arial", size: 20))
+                        .font(Resources.Fonts.mainFont(size: 20))
                         .bold()
                         .foregroundColor(.white)
                         .padding()
@@ -60,7 +60,7 @@ struct AuthorizationView: View {
                     print("je")
                 } label: {
                     Text("Зарегистрироваться")
-                        .font(.custom("Arial", size: 20))
+                        .font(Resources.Fonts.mainFont(size: 20))
                         .bold()
                         .foregroundColor(.white)
                         .padding(.top, 6)

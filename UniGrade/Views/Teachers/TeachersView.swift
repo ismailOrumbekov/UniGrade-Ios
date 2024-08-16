@@ -49,31 +49,36 @@ struct TeachersView: View {
                     .foregroundColor(.black)
                     .padding(.leading)
                 
-                TextField("Поиск", text: $searchText)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                                    .frame(width: Resources.screen.width * 0.9)
-                                    .padding()
+                
                 
                 
                 
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.top)
+            .padding(.vertical)
 
             ScrollView(.vertical, showsIndicators: false) {
-                
+                TextField("Поиск", text: $searchText)
+                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                                    .frame(width: Resources.screen.width * 0.9)
+                                    .padding(.horizontal)
+                                    .padding(.bottom)
+                                    .background(Color.white)
                 
             
                 LazyVGrid(columns: layout, spacing: 10) {
                     ForEach(filteredTeachers, id: \.id) { item in
                         TeacherCell(viewModel: item)
                     }
-                }
+                    
+                    
+                }         
+                .background(Resources.Colors.passiveColor)
+
 
             }
             .padding(.top, 10)
             .ignoresSafeArea(edges: .bottom)
-            .background(Color(hexString: "#F0F1F2"))
 
         }
         .background(Color.white)

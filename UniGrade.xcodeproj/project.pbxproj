@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D18E7A52C76008D00EC23AE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18E7A42C76008D00EC23AE /* HomeView.swift */; };
+		8D18E7A82C76302A00EC23AE /* PasswordCheckField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18E7A72C76302A00EC23AE /* PasswordCheckField.swift */; };
 		8D5791F62C6758E50084CDD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5791F52C6758E50084CDD1 /* AppDelegate.swift */; };
 		8D5791F82C6758E50084CDD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5791F72C6758E50084CDD1 /* SceneDelegate.swift */; };
 		8D5791FA2C6758E50084CDD1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5791F92C6758E50084CDD1 /* TabBarController.swift */; };
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D18E7A42C76008D00EC23AE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8D18E7A72C76302A00EC23AE /* PasswordCheckField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCheckField.swift; sourceTree = "<group>"; };
 		8D5791F22C6758E50084CDD1 /* UniGrade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniGrade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5791F52C6758E50084CDD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D5791F72C6758E50084CDD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D18E7A62C76301800EC23AE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8D18E7A72C76302A00EC23AE /* PasswordCheckField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		8D5791E92C6758E50084CDD1 = {
 			isa = PBXGroup;
 			children = (
@@ -198,8 +210,10 @@
 		8D57922C2C675BA20084CDD1 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				8D18E7A62C76301800EC23AE /* Components */,
 				8D57922D2C675BCF0084CDD1 /* AuthorizationView.swift */,
 				8D57922F2C675BE70084CDD1 /* RegistrationView.swift */,
+				8D18E7A42C76008D00EC23AE /* HomeView.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -390,6 +404,7 @@
 				8D5791FA2C6758E50084CDD1 /* TabBarController.swift in Sources */,
 				8D5791F62C6758E50084CDD1 /* AppDelegate.swift in Sources */,
 				8D5792322C6762340084CDD1 /* Resources.swift in Sources */,
+				8D18E7A82C76302A00EC23AE /* PasswordCheckField.swift in Sources */,
 				8D57923F2C6CC19A0084CDD1 /* TeacherView.swift in Sources */,
 				8D5791F82C6758E50084CDD1 /* SceneDelegate.swift in Sources */,
 				8D5792302C675BE70084CDD1 /* RegistrationView.swift in Sources */,
@@ -399,6 +414,7 @@
 				8D57923B2C68D61E0084CDD1 /* Teacher.swift in Sources */,
 				8D57922A2C675B3E0084CDD1 /* Extensions.swift in Sources */,
 				8D5792462C6CF9200084CDD1 /* GradeCell.swift in Sources */,
+				8D18E7A52C76008D00EC23AE /* HomeView.swift in Sources */,
 				8D5792382C68D00F0084CDD1 /* TeacherCell.swift in Sources */,
 				8D5792352C68CFE10084CDD1 /* TeachersView.swift in Sources */,
 			);
@@ -580,7 +596,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -610,7 +626,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -14,16 +14,20 @@ struct HomeView: View {
     @State var remember = false
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false){
+        VStack{
             if showRegistration{
                 RegistrationView(email: $email, password: $password, remember: $remember, showAuthorization: $showRegistration)
                     .transition(.asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .leading)))
+                
 
             }else{
                 AuthorizationView(email: $email, password: $password, showRegistration: $showRegistration, Remember: $remember, action: {})
                     .transition(.asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .leading)))
             }
         }
+        .frame(alignment: .top)
+        .background(Resources.Colors.mainColor)
+
         
     }
 

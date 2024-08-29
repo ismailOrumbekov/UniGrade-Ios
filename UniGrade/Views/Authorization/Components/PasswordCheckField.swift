@@ -36,6 +36,7 @@ struct PasswordCheckField: View {
                         .padding(.leading)
                         .frame(maxWidth: .infinity)
                         .frame(height: 55)
+                        .foregroundColor(.white)
                         .focused($isActive)
                         .background(.gray.opacity(0.3), in: .rect(cornerRadius: 16))
                         .opacity(showPassword ? 0 : 1)
@@ -44,15 +45,16 @@ struct PasswordCheckField: View {
                         .padding(.leading)
                         .frame(maxWidth: .infinity)
                         .frame(height: 55)
+                        .foregroundColor(.white)
                         .focused($isActive)
                         .background(.gray.opacity(0.3), in: .rect(cornerRadius: 16))
                         .opacity(showPassword ? 1 : 0)
                 }
                 
-                Text("Password")
+                Text("Пароль")
                     .padding(.horizontal)
                     .offset(y: (isActive || !text.isEmpty) ? -50 : 0)
-                    .foregroundStyle(isActive ? .primary : .secondary)
+                    .foregroundStyle(isActive ? .white : Color(hexString: "#8E8E93"))
                     .animation(.spring(), value: isActive)
                     .onTapGesture {
                         isActive = true
@@ -68,7 +70,7 @@ struct PasswordCheckField: View {
             }
             .overlay(alignment: .trailing) {
                 Image(systemName: showPassword ? "eye.fill" : "eye.slash.fill")
-                    .foregroundStyle(showPassword ? .primary : .secondary)
+                    .foregroundStyle(showPassword ? .white : Color(hexString: "#8E8E93"))
                     .padding(16)
                     .contentShape(Rectangle())
                     .onTapGesture {
@@ -102,6 +104,6 @@ struct CheckText: View {
             Text(text)
         }
         .frame(alignment: .leading)
-        .foregroundColor(check ? .white : .secondary)
+        .foregroundColor(check ? .white : Color(hexString: "#8E8E93"))
     }
 }

@@ -14,6 +14,7 @@ struct Resources{
     struct Colors{
         public static let mainColor = Color(hexString: "#1D2473")
         public static let passiveColor = Color(hexString: "#F0F1F2")
+        public static let secondary = Color(hexString: "#8E8E93")
     }
     
     struct Fonts{

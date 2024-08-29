@@ -19,7 +19,8 @@ class TabBarViewController: UITabBarController {
         
         let busketPageView = TeacherView(viewModel: TeacherViewModel(teacher: Teacher(id: "1", name: "Ержан", lastName: "Чонгаров", age: 42, university: "SDU", avgGrade: 3.5, numberOfGrades: 30),image: Image("teacher")))
         let busketVC = UIHostingController(rootView: busketPageView)
-    
+        busketVC.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person.crop.circle"), tag: 2)
+
         teacherVC.navigationController?.isNavigationBarHidden = true
         busketVC.navigationController?.isNavigationBarHidden = true
         setViewControllers([teacherVC, busketVC], animated: true)
@@ -53,7 +54,7 @@ class TabBarViewController: UITabBarController {
         
         roundLayer.fillColor = UIColor(hexString: "#1D2473").cgColor
         
-        tabBar.unselectedItemTintColor = UIColor(hexString: "#697888")
-        tabBar.tintColor = UIColor(hexString: "#E6A283")
+        tabBar.unselectedItemTintColor = UIColor(hexString: "#8E8E93")
+        tabBar.tintColor = .white
     }
 }
